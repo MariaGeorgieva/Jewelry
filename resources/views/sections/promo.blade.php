@@ -1,4 +1,3 @@
-@extends('sections.master')
 <style>
     .grid {
         position: relative;
@@ -1147,6 +1146,7 @@
         }
     }
 </style>
+@extends('sections.master')
 @section('Necklace')
     @foreach($images as $image)
         @foreach($sections as $section)
@@ -1158,8 +1158,6 @@
                                 <img src="{{url("storage/".$image->image)}}" alt="{{$image->title}}">
                                 <figcaption>
                                     <h2>J.A.W.</h2>
-                                    {{--<p><strong>{{ $image->title }}</strong></p>--}}
-                                    {{--<br>--}}
                                   <p>  {{ $image->description }}</p>
                                     <a href="#">View more</a>
                                 </figcaption>
@@ -1171,6 +1169,7 @@
         @endforeach
     @endforeach
 @endsection
+
 @section('Rings')
     @foreach($images as $image)
         @foreach($sections as $section)

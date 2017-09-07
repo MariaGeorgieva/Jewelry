@@ -33,7 +33,7 @@
         }
 
         .full-height {
-            height: 100vh;
+            height: 90vh;
         }
 
         .flex-center {
@@ -84,12 +84,13 @@
             text-decoration: none;
             text-transform: uppercase;
         }
-
+        .footer{
+            background-color: transparent;
+        }
 
     </style>
 </head>
 <body>
-
 <div class="flex-center position-ref full-height">
     @include('layouts.links')
 
@@ -115,13 +116,12 @@
             <a href="https://www.facebook.com/JewelryArtWorkshop">Facebook</a>
             <a href="">Contacts</a>
         </div>
-        {{--@include('layouts.footer')--}}
     </div>
-
     @yield('register')
     @yield('signIn')
 </div>
 
+    @include('layouts.footer')
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

@@ -109,7 +109,7 @@
         </div>
         <div class="col-md-9 col-sm-8 col-lg-9">
             <!-- dashboard sections-->
-            @yield('users')
+            @yield('countData')
 
             @yield('upload')
             @yield('show')

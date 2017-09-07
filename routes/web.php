@@ -7,7 +7,7 @@ Route::get('/', function () {
 Route::group(['middleware' => ['admin']], function () {
 
     Route::get('admin', 'AdminController@create')->name('dashboard');
-    Route::get('/dashboard', 'AdminController@showUsers');
+    Route::get('/dashboard', 'AdminController@showData');
 
     Route::get('/upload', 'ImageController@create');
     Route::get('/upload','PromotionsController@SelectSectionAndGroups');

@@ -106,31 +106,29 @@
 
 <div class="content">
 
-    {{--<div class="title m-b-md">--}}
-        {{--Jewelry Art Workshop *Special Offers*--}}
-    {{--</div>--}}
-
     <div class="block">
         <div class="container-fluid">
 
-            {{--<div class="row align-items-center justify-content-center">--}}
-            <div class="row-m">
+            <div class="row">
                 @yield('Necklace')
-            </div>
-            <div class="row-m">
-                @yield('Rings')
-            </div>
-            <div class="row-m">
-                @yield('Necklace')
-            </div>
-            <div class="row-m">
-                @yield('Rings')
             </div>
 
+            {{--<div class="row-m">--}}
+                {{--@yield('Rings')--}}
+            {{--</div>--}}
+
+            {{--<div class="row-m">--}}
+                {{--@yield('Necklace')--}}
+            {{--</div>--}}
+
+            {{--<div class="row-m">--}}
+                {{--@yield('Rings')--}}
+            {{--</div>--}}
         </div>
     </div>
 </div>
 @include('layouts.footer')
+
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
