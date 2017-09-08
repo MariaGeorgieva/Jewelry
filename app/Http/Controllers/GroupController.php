@@ -15,18 +15,6 @@ class GroupController extends Controller
     /**
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-//    public function groupSelect()
-//    {
-//            $groups = Group::all();
-//            $selectedGroup = Group::first()->id;
-//
-//        return view('groups.groups', compact('groups', 'selectedGroup'));
-//    }
-
-
-    /**
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     */
     public function groupsShow()
     {
         $groups = DB::table('groups')
@@ -57,7 +45,7 @@ class GroupController extends Controller
     public function updateGroup(Request $request, Group $group)
     {
         $group->update($request->all());
-
+      
         return redirect('/groupsCreate');
 
     }
@@ -70,8 +58,6 @@ class GroupController extends Controller
 
     public function destroyGroup(Request $request, Group $group)
     {
-
-
         $group->delete($request->all());
 
         return redirect('/groupsCreate');

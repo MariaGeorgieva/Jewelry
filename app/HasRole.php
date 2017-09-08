@@ -3,14 +3,25 @@
 namespace App;
 
 
+/**
+ * Trait HasRole
+ * @package App
+ */
 trait HasRole
 {
+    /**
+     * @return mixed
+     */
     public function roles()
     {
         return $this->belongsToMany(Role::class);
 
     }
 
+    /**
+     * @param $role
+     * @return mixed
+     */
     public function assignRole($role)
     {
 
@@ -20,6 +31,10 @@ trait HasRole
         );
     }
 
+    /**
+     * @param $role
+     * @return mixed
+     */
     public function hasRole($role)
     {
         if (is_string($role)) {

@@ -34,16 +34,13 @@
                     <br>
                     <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                         <div class="input-group-addon">Group</div>
-                        {{--<span class="form-control">Group<star>*</star></span>--}}
                         <select class="form-control m-bot15" name="group_id" title="group_id">
-                            {{--<select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">--}}
                             @yield('groups')
                         </select>
                     </div>
                     <br>
                     <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                         <div class="input-group-addon">Section</div>
-                        {{--<span class="form-control">Section<star>*</star></span>--}}
                         <select class="form-control m-bot15" name="section_id" title="section_id">
                             @yield('sections')
                         </select>

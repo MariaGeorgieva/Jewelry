@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * @param $message
+ * @param string $level
+ */
 function flash($message, $level = 'info')
 {
 session()->flash('flash_message', $message);

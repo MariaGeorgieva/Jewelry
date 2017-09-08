@@ -74,16 +74,7 @@ class PromotionsController extends Controller
 
         return redirect('/sectionCreate');
     }
-
-//    public function sectionSelect()
-//    {
-//        $sections = Section::all();
-//        $selectedSection = Section::first()->id;
-//
-//        return view('sections.sections', compact('sections', 'selectedSection'));
-//
-//    }
-
+    
     public function SelectSectionAndGroups()
     {
         $result = Section::all();
@@ -91,7 +82,7 @@ class PromotionsController extends Controller
         if ($result->isEmpty()) {
             flash('Before upload files, you must have Sections!!!', 'error');
             return redirect('/sectionCreate');
-        } //        return view('sections.sections', compact('sections', 'selectedSection'));
+        }
         elseif ($resultGroup->isEmpty()) {
             flash('Before upload files, you must have Groups!!!', 'error');
             return redirect('/groupsCreate');

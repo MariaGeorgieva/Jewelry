@@ -27,10 +27,20 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    /**
+     * Crypt password
+     *
+     * @param $password
+     */
     public function setPasswordAttribute($password)
     {
         $this->attributes['password'] = bcrypt($password);
     }
+
+    /**
+     * @param $roleName
+     * @return bool
+     */
     public function isAdmin($roleName)
     {
         foreach ($this->roles()->get() as $role) {

@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Permission extends Model
 {
+    /**
+     * @return mixed
+     */
     public function roles()
     {
         return $this->belongsToMany(Role::class);

@@ -31,16 +31,16 @@ class ImageController extends Controller
     public function upload(Request $request)
     {
 
-            request()->file('image')->store('images');
-            $filename = $request->file('image')->hashName();
-            Image::create(array(
-                'title' => $request->get('title'),
-                'description' => $request->get('description'),
-                'group_id' => $request->get('group_id'),
-                'section_id' => $request->get('section_id'),
-                'price' => $request->get('price'),
-                'image' => $filename,
-            ));
+        request()->file('image')->store('images');
+        $filename = $request->file('image')->hashName();
+        Image::create(array(
+            'title' => $request->get('title'),
+            'description' => $request->get('description'),
+            'group_id' => $request->get('group_id'),
+            'section_id' => $request->get('section_id'),
+            'price' => $request->get('price'),
+            'image' => $filename,
+        ));
 
 
         return redirect('/show');
@@ -57,9 +57,9 @@ class ImageController extends Controller
             ->orderBy('id', 'desc')
             ->paginate(4);
         $groups = Group::all();
-        $sections=Section::all();
+        $sections = Section::all();
 
-        return view('files.show', compact('images', 'groups','sections'));
+        return view('files.show', compact('images', 'groups', 'sections'));
     }
 
     /**
@@ -68,10 +68,13 @@ class ImageController extends Controller
      */
     public function edit(Image $image)
     {
-//        $groups = Group::all();
+        $sections = Section::all();
+        $selectedSection = Section::first()->id;
 
-//        return view('files.edit', compact('image', 'groups'));
-        return view('files.edit', compact('image'));
+        $groups = Group::all();
+        $selectedGroup = Group::first()->id;
+
+        return view('files.edit', compact('image', 'sections', 'selectedSection', 'groups', 'selectedGroup'));
     }
 
     /**

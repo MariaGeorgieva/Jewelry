@@ -7,6 +7,10 @@ use App\User;
 use App\Image;
 use Illuminate\Http\Request;
 
+/**
+ * Class AdminController
+ * @package App\Http\Controllers
+ */
 class AdminController extends Controller
 {
     /**
@@ -28,4 +32,5 @@ class AdminController extends Controller
 
         return view('dashboard.data', compact('users','images'));
     }
+    
 }
