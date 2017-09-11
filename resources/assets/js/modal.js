@@ -11,3 +11,7 @@ $(document).ready(function () {
     $("#quizModal").modal("show");
 
 });
+
+
+    $('.carousel').carousel()
+

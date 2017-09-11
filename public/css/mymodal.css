@@ -7,12 +7,13 @@
   content: '';
   display: inline-block;
   height: 100%;
-  vertical-align: middle;
+  vertical-align: top;
   margin-right: -4px;
 }
 
 .modal-dialog {
   display: inline-block;
   text-align: left;
-  vertical-align: middle;
+  margin-top: 10px;
+  vertical-align: top;
 }

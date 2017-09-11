@@ -55,7 +55,8 @@ class ImageController extends Controller
 
         $images = DB::table('images')
             ->orderBy('id', 'desc')
-            ->paginate(4);
+            ->paginate(5);
+
         $groups = Group::all();
         $sections = Section::all();
 
@@ -96,8 +97,10 @@ class ImageController extends Controller
      */
     public function delete(Image $image)
     {
+        $sections = Section::all();
+        $groups = Group::all();
 
-        return view('files.delete', compact('image'));
+        return view('files.delete', compact('image', 'sections', 'groups'));
     }
 
     /**
@@ -117,5 +120,6 @@ class ImageController extends Controller
         }
         return redirect('/show');
     }
+
 
 }

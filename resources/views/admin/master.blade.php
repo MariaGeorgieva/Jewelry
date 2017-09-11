@@ -105,6 +105,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-3 col-sm-4 col-lg-3">
+            <!-- admin sidebar-->
             @include('admin.sidebar')
         </div>
         <div class="col-md-9 col-sm-8 col-lg-9">

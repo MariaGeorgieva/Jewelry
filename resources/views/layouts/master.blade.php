@@ -87,7 +87,6 @@
         .footer{
             background-color: transparent;
         }
-
     </style>
 </head>
 <body>

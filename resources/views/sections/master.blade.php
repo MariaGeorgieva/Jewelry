@@ -3,7 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{--<meta name="viewport" content="width=device-width, initial-scale=1">--}}
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
 
     <title>J.A.W. Special Offers</title>
 
@@ -59,16 +61,6 @@
             font-size: 48px;
         }
 
-        .links > a {
-            color: #636b6f;
-            padding: 0 25px;
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: .1rem;
-            text-decoration: none;
-            text-transform: uppercase;
-        }
-
         .m-b-md {
             margin-top: 50px;
             margin-bottom: 10px;
@@ -83,50 +75,30 @@
             text-decoration: none;
             text-transform: uppercase;
         }
-
-        .row-m {
-            display: -webkit-box;
-            display: -webkit-flex;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-flex-wrap: nowrap;
-            -ms-flex-wrap: inherit;
-            flex-wrap: nowrap;
-            margin-right: -15px;
-            margin-left: -15px;
-            margin-bottom: -15px;
-        }
     </style>
 </head>
 <body>
 
-<div class="flex-center position-ref ">
+<div class="flex-center position-ref sm-0">
     @include('sections.links_base_special')
+
 </div>
+<div class="title m-b-md bg-faded text-center">
+    Jewelry Art Workshop *Special Offers*
+</div>
+{{--<div class="content">--}}
 
-<div class="content">
+{{--<div class="block">--}}
+<div class="container-fluid">
+    <div class="row">
+        @yield('groupTwo')
+    </div>
 
-    <div class="block">
-        <div class="container-fluid">
-
-            <div class="row">
-                @yield('Necklace')
-            </div>
-
-            {{--<div class="row-m">--}}
-                {{--@yield('Rings')--}}
-            {{--</div>--}}
-
-            {{--<div class="row-m">--}}
-                {{--@yield('Necklace')--}}
-            {{--</div>--}}
-
-            {{--<div class="row-m">--}}
-                {{--@yield('Rings')--}}
-            {{--</div>--}}
-        </div>
+    <div class="row">
+        @yield('groupOne')
     </div>
 </div>
+
 @include('layouts.footer')
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

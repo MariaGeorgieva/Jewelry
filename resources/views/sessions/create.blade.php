@@ -1,5 +1,10 @@
+<style>
+    span.input-group-addon {
+        min-width:28%;
+        text-align:left;
+    }
+</style>
 @extends('layouts.master')
-
 @section('signIn')
 
     <div id="quizModal" class="modal fade bd-modal-md" tabindex="-1" role="dialog" aria-labelledby="myMediumModalLabel"
@@ -14,29 +19,26 @@
                                 aria-hidden="true">&times;</span></button>
 
                 </div>
-                <div class="modal-body">
-                    <form method="POST" action="/login" enctype="multipart/form-data" class="">
-                        {{ csrf_field() }}
-                        <div class="form-group">
-                            <label for="email">Email Address:</label>
+
+                <form method="POST" action="/login" enctype="multipart/form-data" class="">
+                    {{ csrf_field() }}
+                    <div class="modal-body">
+                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                            <span class="input-group-addon">Email Address:</span>
                             <input type="email" class="form-control" id="email" name="email">
                         </div>
-
-                        <div class="form-group">
-                            <label for="password">Password:</label>
+                        <br>
+                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                            <span class="input-group-addon">Password:</span>
                             <input type="password" class="form-control" id="password" name="password">
                         </div>
-
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-default">Sign In</button>
-                        </div>
-                        @include('layouts.errors')
-                    </form>
-                </div>
-
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-secondary text-right">Sign In</button>
+                    </div>
+                    @include('layouts.errors')
+                </form>
             </div>
         </div>
     </div>
-
-
 @endsection
