@@ -3,6 +3,13 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Admin Panel</title>
+    <!--  Material Dashboard CSS    -->
+    <link href="css/try/material-dashboard.css?v=1.2.0" rel="stylesheet" />
+    <!--     Fonts and icons     -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -124,10 +131,6 @@
             @yield('createSection')
             @yield('editSection')
             @yield('deleteSection')
-
-
-
-
 
         </div>
     </div>

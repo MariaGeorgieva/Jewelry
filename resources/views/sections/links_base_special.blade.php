@@ -19,7 +19,7 @@
         </button>
 
     </div>
-    <a class="navbar-brand" href="{{route('home')}}">J.A.W.</a>
+    <a class="navbar-brand" href="{{route('home')}}"><i class="fa fa-diamond"></i>J.A.W.</a>
     <div class="collapse navbar-collapse text-center" id="navbarCollapse">
         <ul class="navbar-nav mr-auto text-center">
             <li class="nav-item ">

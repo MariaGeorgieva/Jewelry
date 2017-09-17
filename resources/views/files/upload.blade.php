@@ -17,7 +17,7 @@
                     <div class="form-group">
                         <input type="file" class="form-control" name="image" aria-describedby="fileHelp">
                         <small id="fileHelp" class="form-text text-muted "><strong>*.jpg *.jpeg *.png *.gif Max
-                                Size:2MB</small>
+                                Size:2MB</strong></small>
                     </div>
                     <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                         <span class="input-group-addon">Title:</span>
@@ -52,7 +52,6 @@
                     </div>
                     <br>
                     <button type="submit" class="btn btn-default">Save</button>
-
                 </form>
             </div>
         </div>

@@ -11,9 +11,11 @@
     <a href="{{route('logout')}}">Sing Out</a>
 
     @else
-    <a href="{{url('login')}}">Sign In</a>
+    <a href="{{url('login')}}" >Sign In</a>
+
     <a href="{{route('register')}}">Register</a>
     @endif
 
 </div>
+
 

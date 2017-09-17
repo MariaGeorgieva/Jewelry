@@ -1,59 +1,71 @@
 @extends('admin.master')
 @section('countData')
-    <div class="row" style="margin-top: 10px">
-        <!-- Column -->
-        <div class="col-md-6 col-lg-3">
-            <div class="card card-body">
-                <!-- Row -->
-                <div class="row">
-                    <!-- Column -->
-                    <div class="col p-r-0 align-self-center">
-                        <h2 class="font-light m-b-0 text-center"><i class="material-icons">face</i>{{ count($users)}}
-                        </h2>
-                        <h6 class="text-muted text-center">Total Registered Users</h6></div>
+    <div class="row" style="margin-top: 5px;">
+        <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="card card-stats">
+                <div class="card-header" data-background-color="orange">
+                    <i class="material-icons">face</i>
                 </div>
+                <div class="card-content">
+                    <p class="category">Total Registered Users</p>
+                    <h3 class="card-title">{{ count($users)}}</h3>
+                </div>
+                {{--<div class="card-footer">--}}
+                    {{--<div class="stats">--}}
+                        {{--<i class="material-icons text-danger">warning</i>--}}
+                        {{--<a href="#pablo">Get More Space...</a>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
             </div>
         </div>
-        <!-- Column -->
-        <div class="col-md-6 col-lg-3">
-            <div class="card card-body">
-                <!-- Row -->
-                <div class="row">
-                    <!-- Column -->
-                    <div class="col p-r-0 align-self-center">
-                        <h2 class="font-light m-b-0 text-center">
-                            <i class="material-icons">photo_library</i>{{ count($images)}}</h2>
-                        <h6 class="text-muted text-center">Total Upload Product</h6></div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="card card-stats">
+                <div class="card-header" data-background-color="rose">
+                    <i class="material-icons">photo_library</i>
                 </div>
+                <div class="card-content">
+                    <p class="category">Total Upload Product</p>
+                    <h3 class="card-title">{{ count($images)}}</h3>
+                </div>
+                {{--<div class="card-footer">--}}
+                    {{--<div class="stats">--}}
+                        {{--<i class="material-icons">local_offer</i> Tracked from Google Analytics--}}
+                    {{--</div>--}}
+                {{--</div>--}}
             </div>
         </div>
-        <!-- Column -->
-        <div class="col-md-6 col-lg-3">
-            <div class="card card-body">
-                <!-- Row -->
-                <div class="row">
-                    <!-- Column -->
-                    <div class="col p-r-0 align-self-center">
-                        <h2 class="font-light m-b-0 text-center">
-                            <i class="material-icons">card_giftcard</i>{{ count($images->where('section_id','==',1)) }}
-                        </h2>
-                        <h6 class="text-muted text-center">Special Offers</h6></div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="card card-stats">
+                <div class="card-header" data-background-color="green">
+                    <i class="material-icons">card_giftcard</i>
                 </div>
+                <div class="card-content">
+                    <p class="category">Special Offers</p>
+                    <h3 class="card-title">{{ count($images->where('section_id','==',1)) }}</h3>
+                </div>
+                {{--<div class="card-footer">--}}
+                    {{--<div class="stats">--}}
+                        {{--<i class="material-icons">date_range</i> Last 24 Hours--}}
+                    {{--</div>--}}
+                {{--</div>--}}
             </div>
         </div>
-        <!-- Column -->
-        <div class="col-md-6 col-lg-3">
-            <div class="card card-body">
-                <!-- Row -->
-                <div class="row">
-                    <!-- Column -->
-                    <div class="col p-r-0 align-self-center">
-                        <h2 class="font-light m-b-0 text-center">
-                            <i class="material-icons">local_offer</i>{{ count($images->where('section_id','==',2)) }}
-                        </h2>
-                        <h6 class="text-muted text-center">Basic Offers</h6></div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="card card-stats">
+                <div class="card-header" data-background-color="blue">
+                    <i class="material-icons">local_offer</i>
                 </div>
+                <div class="card-content">
+                    <p class="category">Basic Offer</p>
+                    <h3 class="card-title">{{ count($images->where('section_id','==',2)) }}</h3>
+                </div>
+                {{--<div class="card-footer">--}}
+                    {{--<div class="stats">--}}
+                        {{--<i class="material-icons">update</i> Just Updated--}}
+                    {{--</div>--}}
+                {{--</div>--}}
             </div>
         </div>
     </div>
+
 @endsection
