@@ -29,11 +29,11 @@
             background: #2548ce;
         }
 
-        .Alert--Success {
+        .Alert--success {
             background: #23ff14;
         }
 
-        .Alert--Error {
+        .Alert--error {
             /*background: #ff0000;*/
             color: red;
         }

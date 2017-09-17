@@ -26,8 +26,8 @@ class PromotionsController extends Controller
         
         $sections = DB::table('section')
             ->get();
-        return view('sections.promo', compact('images', 'groups','sections'));
-//        return view('sections.carousel', compact('images', 'groups','sections'));
+        return view('sections.promoGroups', compact('images', 'groups','sections'));
+
     }
 
     public function sectionShow()

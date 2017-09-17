@@ -13,8 +13,17 @@ use App\Http\Requests;
 use Response;
 use Storage;
 
+
 class ImageController extends Controller
 {
+
+    public function showHome()
+    {
+        $images = DB::table('images')->where('section_id', '3')->get();
+
+        return view('layouts.carousel_main', compact('images'));
+    }
+
     /**
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
@@ -62,6 +71,7 @@ class ImageController extends Controller
 
         return view('files.show', compact('images', 'groups', 'sections'));
     }
+
 
     /**
      * @param Image $image

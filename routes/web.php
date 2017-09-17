@@ -1,8 +1,10 @@
 <?php
 
-Route::get('/', function () {
-    return view('layouts.master');
-})->name('home');
+//Route::get('/', function () {
+//    return view('layouts.master');
+//})->name('home');
+
+Route::get('/', 'ImageController@showHome')->name('home');
 
 Route::group(['middleware' => ['admin']], function () {
 
@@ -10,7 +12,7 @@ Route::group(['middleware' => ['admin']], function () {
     Route::get('/dashboard', 'AdminController@showData');
 
     Route::get('/upload', 'ImageController@create');
-    Route::get('/upload','PromotionsController@SelectSectionAndGroups');
+    Route::get('/upload', 'PromotionsController@SelectSectionAndGroups');
     Route::post('images', 'ImageController@upload');
     Route::get('/show', 'ImageController@show');
     Route::get('{image}/edit', 'ImageController@edit');
@@ -19,15 +21,15 @@ Route::group(['middleware' => ['admin']], function () {
     Route::delete('{image}', 'ImageController@destroy');
 
 
-    Route::get('/groupsCreate','GroupController@groupsShow');
-    Route::post('/groupsCreate','GroupController@groupsCreate');
+    Route::get('/groupsCreate', 'GroupController@groupsShow');
+    Route::post('/groupsCreate', 'GroupController@groupsCreate');
     Route::get('/groupsCreate/{group}/editGroup', 'GroupController@editGroup');
     Route::patch('/groupsCreate/{group}', 'GroupController@updateGroup');
     Route::get('/groupsCreate/{group}/deleteGroup', 'GroupController@deleteGroup');
     Route::delete('/groupsCreate/{group}', 'GroupController@destroyGroup');
 
-    Route::get('/sectionCreate','PromotionsController@sectionShow');
-    Route::post('/sectionCreate','PromotionsController@sectionCreate');
+    Route::get('/sectionCreate', 'PromotionsController@sectionShow');
+    Route::post('/sectionCreate', 'PromotionsController@sectionCreate');
     Route::get('/sectionCreate/{section}/editSection', 'PromotionsController@editSection');
     Route::patch('/sectionCreate/{section}', 'PromotionsController@updateSection');
     Route::get('/sectionCreate/{section}/deleteSection', 'PromotionsController@deleteSection');
@@ -56,8 +58,17 @@ Route::get('promo', 'PromotionsController@show');
 Route::get('/register', 'RegistrationController@create')->name('register');
 Route::post('/register', 'RegistrationController@store');
 
-//Route::get('login', ['as' => 'login', 'uses' => 'SessionsController@create'])->name('login');
-//Route::post('login', ['as' => 'login', 'uses' => 'SessionsController@store']);
 Route::get('/login', 'SessionsController@create')->name('login');
 Route::post('/login', 'SessionsController@store');
-Route::get('/logout', 'SessionsController@destroy')->name('logout');;
+Route::get('/logout', 'SessionsController@destroy')->name('logout');
+
+Route::get('/aboutUs', function (){
+
+    return view('pages.aboutUs');
+});
+Route::get('/news', function (){
+
+    return view('pages.news');
+});
+Route::get('/contacts','ContactController@create');
+Route::post('/contacts','ContactController@store');
